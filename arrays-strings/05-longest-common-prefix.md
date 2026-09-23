@@ -1,6 +1,6 @@
 ## Problem: Longest Common Prefix (Easy)
 
-**Link:** https://leetcode.com/problems/longest-common-prefix/
+**Link:** https://leetcode.com/problems/longest-common-prefix/submissions/2150503696/
 
 ### Approach
 

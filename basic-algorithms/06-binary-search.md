@@ -1,6 +1,6 @@
 ## Problem: Binary Search (Easy)
 
-**Link:** https://leetcode.com/problems/binary-search/
+**Link:** https://leetcode.com/problems/binary-search/submissions/2150505470/
 
 ### Approach
 

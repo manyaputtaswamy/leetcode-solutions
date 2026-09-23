@@ -1,6 +1,6 @@
 ## Problem: Valid Parentheses (Easy)
 
-**Link:** https://leetcode.com/problems/valid-parentheses/
+**Link:** https://leetcode.com/problems/valid-parentheses/submissions/2150508482/
 
 ### Approach
 

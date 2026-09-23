@@ -1,6 +1,6 @@
 ## Problem: Best Time to Buy and Sell Stock (Easy)
 
-**Link:** https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+**Link:** https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/2150502130/
 
 ### Approach
 
