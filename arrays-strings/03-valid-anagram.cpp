@@ -2,43 +2,41 @@
 #include <string>
 using namespace std;
 
-int main()
-{
-    // Test Case 1: Typical case
-    // Input: anagram, nagaram
-    // Expected Output: Valid Anagram
+bool isAnagram(string s, string t) {
+    if (s.length() != t.length()) {
+        return false;
+    }
 
-    string str1 = "anagram";
-    string str2 = "nagaram";
+    int count[26] = {0};
 
-    int count1[26] = {0};
-    int count2[26] = {0};
+    for (int i = 0; i < s.length(); i++) {
+        count[s[i] - 'a']++;
+        count[t[i] - 'a']--;
+    }
 
-    for (char c : str1)
-        count1[c - 'a']++;
-
-    for (char c : str2)
-        count2[c - 'a']++;
-
-    bool isAnagram = true;
-
-    for (int i = 0; i < 26; i++)
-    {
-        if (count1[i] != count2[i])
-        {
-            isAnagram = false;
-            break;
+    for (int i = 0; i < 26; i++) {
+        if (count[i] != 0) {
+            return false;
         }
     }
 
-    if (isAnagram)
-        cout << "Valid Anagram" << endl;
-    else
-        cout << "Not an Anagram" << endl;
+    return true;
+}
 
-    // Test Case 2: Edge case
-    // Input: rat, car
-    // Expected Output: Not an Anagram
+int main() {
+    // Test Case 1 - Typical case
+    string s1 = "anagram";
+    string t1 = "nagaram";
+
+    cout << "Test Case 1: "
+         << (isAnagram(s1, t1) ? "true" : "false") << endl;
+
+    // Test Case 2 - Edge case: different lengths
+    string s2 = "rat";
+    string t2 = "car";
+
+    cout << "Test Case 2: "
+         << (isAnagram(s2, t2) ? "true" : "false") << endl;
 
     return 0;
 }
