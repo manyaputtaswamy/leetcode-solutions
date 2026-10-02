@@ -1,37 +1,42 @@
 #include <iostream>
+#include <vector>
 #include <string>
 using namespace std;
 
-int main()
-{
-    // Test Case 1: Typical case
-    // Input: flower, flow, flight
-    // Expected Output: fl
+string longestCommonPrefix(vector<string>& strs) {
+    string prefix = strs[0];
 
-    string words[] = {"flower", "flow", "flight"};
-    int n = 3;
-
-    string prefix = words[0];
-
-    for (int i = 1; i < n; i++)
-    {
+    for (int i = 1; i < strs.size(); i++) {
         int j = 0;
 
         while (j < prefix.length() &&
-               j < words[i].length() &&
-               prefix[j] == words[i][j])
-        {
+               j < strs[i].length() &&
+               prefix[j] == strs[i][j]) {
             j++;
         }
 
         prefix = prefix.substr(0, j);
+
+        if (prefix.empty()) {
+            return "";
+        }
     }
 
-    cout << "Longest Common Prefix: " << prefix << endl;
+    return prefix;
+}
 
-    // Test Case 2: Edge case
-    // Input: dog, racecar, car
-    // Expected Output: No common prefix
+int main() {
+    // Test Case 1 - Typical case
+    vector<string> strs1 = {"flower", "flow", "flight"};
+
+    cout << "Test Case 1: "
+         << longestCommonPrefix(strs1) << endl;
+
+    // Test Case 2 - Edge case: no common prefix
+    vector<string> strs2 = {"dog", "racecar", "car"};
+
+    cout << "Test Case 2: "
+         << longestCommonPrefix(strs2) << endl;
 
     return 0;
 }
