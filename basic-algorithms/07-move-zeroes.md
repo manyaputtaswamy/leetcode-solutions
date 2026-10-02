@@ -4,8 +4,8 @@
 
 ### Approach
 
-We move all non-zero elements to the beginning of the array while maintaining their order.
-After that, we fill the remaining positions with zeroes.
+I move all non-zero elements toward the beginning of the array.
+After placing all non-zero elements, the remaining positions are filled with zeroes.
 
 ### Complexity
 
@@ -14,5 +14,4 @@ After that, we fill the remaining positions with zeroes.
 
 ### Notes
 
-The solution modifies the array in-place.
-The relative order of non-zero elements is maintained.
+The order of the non-zero elements should remain unchanged.

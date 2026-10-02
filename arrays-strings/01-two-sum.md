@@ -4,8 +4,8 @@
 
 ### Approach
 
-We use two loops to check every pair of numbers in the array.
-If the sum of two numbers equals the target, we return their indexes.
+I used two nested loops to check every possible pair of numbers.
+When the sum of two numbers equals the target, their indices are returned.
 
 ### Complexity
 
@@ -14,5 +14,4 @@ If the sum of two numbers equals the target, we return their indexes.
 
 ### Notes
 
-The indexes start from 0.
-We should not use the same element twice.
+The solution should handle duplicate values, such as [3, 3] with target 6.

@@ -1,11 +1,11 @@
 ## Problem: Best Time to Buy and Sell Stock (Easy)
 
-**Link:** https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/2150502130/
+**Link:**  https://leetcode.com/problems/best-time-to-buy-and-sell-stock/submissions/2150502130/
 
 ### Approach
 
-We keep track of the minimum price seen so far.
-For each price, we calculate the possible profit and keep the maximum profit.
+I keep track of the minimum price seen so far.
+For every price, I calculate the possible profit and keep the maximum profit.
 
 ### Complexity
 
@@ -14,5 +14,4 @@ For each price, we calculate the possible profit and keep the maximum profit.
 
 ### Notes
 
-We must buy before selling.
-If no profit is possible, the maximum profit is 0.
+If the prices continuously decrease, the maximum profit is 0 because no profitable transaction is possible.

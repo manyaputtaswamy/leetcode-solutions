@@ -4,8 +4,8 @@
 
 ### Approach
 
-We use two pointers, left and right, to search the sorted array.
-We check the middle element and reduce the search range based on the target value.
+I used two pointers to represent the current search range.
+The middle element is checked and half of the search space is removed each time.
 
 ### Complexity
 
@@ -14,5 +14,4 @@ We check the middle element and reduce the search range based on the target valu
 
 ### Notes
 
-Binary search works only when the array is sorted.
-If the target is not found, we return -1.
+The input array must be sorted for binary search to work correctly.

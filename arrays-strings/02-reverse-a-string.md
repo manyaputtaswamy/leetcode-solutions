@@ -1,11 +1,11 @@
-## Problem: Reverse String (Easy)
+## Problem: Reverse a String (Easy)
 
 **Link:** https://leetcode.com/problems/reverse-string/
 
 ### Approach
 
-We use two pointers, one at the beginning and one at the end of the string.
-We swap the characters at both positions and move the pointers towards the center.
+I used two pointers, one starting from the beginning and the other from the end.
+The characters are swapped until both pointers meet.
 
 ### Complexity
 
@@ -14,4 +14,4 @@ We swap the characters at both positions and move the pointers towards the cente
 
 ### Notes
 
-The two-pointer approach allows the string to be reversed without using extra space.
+A single-character string is an edge case because no swapping is required.

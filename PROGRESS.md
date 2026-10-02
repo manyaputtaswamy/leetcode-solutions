@@ -9,4 +9,8 @@
 | 23/09 | Longest Common Prefix | Arrays & Strings | Easy-Medium | ✅ Solved | -- |
 | 23/09 | Binary Search | Basic Algorithms | Easy-Medium | ✅ Solved | -- |
 | 23/09 | Move Zeroes | Basic Algorithms | Easy-Medium | ✅ Solved | -- |
+<<<<<<< HEAD
 | 23/09 | Valid Parentheses | Stacks | Easy-Medium | ✅ Solved | -- |
+=======
+| 23/09 | Valid Parentheses | Stacks | Easy-Medium | ✅ Solved | -- |
+>>>>>>> 5ed2b0b (Complete Activity 6 LeetCode practice and documentation)

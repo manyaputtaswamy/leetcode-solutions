@@ -4,13 +4,13 @@
 
 ### Approach
 
-We take the first string as the initial prefix.
-We compare it with each remaining string and reduce the prefix until all strings have the same starting characters.
+I start with the first string as the prefix.
+I compare it with every other string and reduce the prefix until it matches.
 
 ### Complexity
 
 - Time: O(n × m)
-- Space: O(m)
+- Space: O(1)
 
 ### Notes
 

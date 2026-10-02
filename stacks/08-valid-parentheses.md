@@ -1,11 +1,11 @@
 ## Problem: Valid Parentheses (Easy)
 
-**Link:** https://leetcode.com/problems/valid-parentheses/submissions/2150508482/
+**Link:**  https://leetcode.com/problems/valid-parentheses/submissions/2150508482/
 
 ### Approach
 
-We use a stack to store opening brackets.
-For each closing bracket, we check whether it matches the most recent opening bracket.
+I used a stack to store opening brackets.
+Whenever a closing bracket is found, it is compared with the top opening bracket in the stack.
 
 ### Complexity
 
@@ -14,5 +14,5 @@ For each closing bracket, we check whether it matches the most recent opening br
 
 ### Notes
 
-A stack follows the Last In, First Out (LIFO) principle.
-The parentheses are valid only when all brackets are properly matched.
+The brackets must be correctly matched and properly nested.
+An input such as "(]" is invalid.
