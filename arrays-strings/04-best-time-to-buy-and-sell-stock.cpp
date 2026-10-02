@@ -1,32 +1,32 @@
 #include <iostream>
+#include <vector>
+#include <algorithm>
 using namespace std;
 
-int main()
-{
-    // Test Case 1: Typical case
-    // Input: prices = {7, 1, 5, 3, 6, 4}
-    // Expected Output: 5
-
-    int prices[] = {7, 1, 5, 3, 6, 4};
-    int n = 6;
-
+int maxProfit(vector<int>& prices) {
     int minPrice = prices[0];
-    int maxProfit = 0;
+    int maxProfitValue = 0;
 
-    for (int i = 1; i < n; i++)
-    {
-        if (prices[i] - minPrice > maxProfit)
-            maxProfit = prices[i] - minPrice;
-
-        if (prices[i] < minPrice)
-            minPrice = prices[i];
+    for (int i = 1; i < prices.size(); i++) {
+        maxProfitValue = max(maxProfitValue, prices[i] - minPrice);
+        minPrice = min(minPrice, prices[i]);
     }
 
-    cout << "Maximum Profit: " << maxProfit << endl;
+    return maxProfitValue;
+}
 
-    // Test Case 2: Edge case
-    // Input: prices = {7, 6, 4, 3, 1}
-    // Expected Output: 0
+int main() {
+    // Test Case 1 - Typical case
+    vector<int> prices1 = {7, 1, 5, 3, 6, 4};
+
+    cout << "Test Case 1: "
+         << maxProfit(prices1) << endl;
+
+    // Test Case 2 - Edge case: prices always decrease
+    vector<int> prices2 = {7, 6, 4, 3, 1};
+
+    cout << "Test Case 2: "
+         << maxProfit(prices2) << endl;
 
     return 0;
 }
