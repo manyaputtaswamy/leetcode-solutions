@@ -1,33 +1,41 @@
 #include <iostream>
-#include <string>
+#include <vector>
 using namespace std;
 
-int main()
-{
-    // Test Case 1: Typical case
-    // Input: hello
-    // Expected Output: olleh
+void reverseString(vector<char>& s) {
+    int left = 0;
+    int right = s.size() - 1;
 
-    string str = "hello";
-
-    int start = 0;
-    int end = str.length() - 1;
-
-    while (start < end)
-    {
-        char temp = str[start];
-        str[start] = str[end];
-        str[end] = temp;
-
-        start++;
-        end--;
+    while (left < right) {
+        swap(s[left], s[right]);
+        left++;
+        right--;
     }
+}
 
-    cout << "Reversed string: " << str << endl;
+void printString(vector<char>& s) {
+    for (char c : s) {
+        cout << c;
+    }
+    cout << endl;
+}
 
-    // Test Case 2: Edge case
-    // Input: a
-    // Expected Output: a
+int main() {
+    // Test Case 1 - Typical case
+    vector<char> s1 = {'h', 'e', 'l', 'l', 'o'};
+
+    reverseString(s1);
+
+    cout << "Test Case 1: ";
+    printString(s1);
+
+    // Test Case 2 - Edge case: single character
+    vector<char> s2 = {'a'};
+
+    reverseString(s2);
+
+    cout << "Test Case 2: ";
+    printString(s2);
 
     return 0;
 }
