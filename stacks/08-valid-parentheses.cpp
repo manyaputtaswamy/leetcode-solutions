@@ -3,50 +3,44 @@
 #include <string>
 using namespace std;
 
-int main()
-{
-    // Test Case 1: Typical case
-    // Input: s = "()[]{}"
-    // Expected Output: Valid Parentheses
-
-    string s = "()[]{}";
+bool isValid(string s) {
     stack<char> st;
 
-    for (char c : s)
-    {
-        if (c == '(' || c == '[' || c == '{')
-        {
+    for (char c : s) {
+        if (c == '(' || c == '{' || c == '[') {
             st.push(c);
         }
-        else
-        {
-            if (st.empty())
-            {
-                cout << "Invalid Parentheses" << endl;
-                return 0;
+        else {
+            if (st.empty()) {
+                return false;
             }
 
             char top = st.top();
             st.pop();
 
             if ((c == ')' && top != '(') ||
-                (c == ']' && top != '[') ||
-                (c == '}' && top != '{'))
-            {
-                cout << "Invalid Parentheses" << endl;
-                return 0;
+                (c == '}' && top != '{') ||
+                (c == ']' && top != '[')) {
+                return false;
             }
         }
     }
 
-    if (st.empty())
-        cout << "Valid Parentheses" << endl;
-    else
-        cout << "Invalid Parentheses" << endl;
+    return st.empty();
+}
 
-    // Test Case 2: Edge case
-    // Input: s = "(]"
-    // Expected Output: Invalid Parentheses
+int main() {
+    // Test Case 1 - Typical case
+    string s1 = "()[]{}";
+
+    cout << "Test Case 1: "
+         << (isValid(s1) ? "true" : "false") << endl;
+
+    // Test Case 2 - Edge case: mismatched brackets
+    string s2 = "(]";
+
+    cout << "Test Case 2: "
+         << (isValid(s2) ? "true" : "false") << endl;
 
     return 0;
 }
