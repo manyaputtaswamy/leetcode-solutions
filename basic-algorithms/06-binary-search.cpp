@@ -1,44 +1,42 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
-int main()
-{
-    // Test Case 1: Typical case
-    // Input: nums = {1, 3, 5, 7, 9}, target = 7
-    // Expected Output: Index 3
-
-    int nums[] = {1, 3, 5, 7, 9};
-    int n = 5;
-    int target = 7;
-
+int search(vector<int>& nums, int target) {
     int left = 0;
-    int right = n - 1;
-    int result = -1;
+    int right = nums.size() - 1;
 
-    while (left <= right)
-    {
+    while (left <= right) {
         int mid = left + (right - left) / 2;
 
-        if (nums[mid] == target)
-        {
-            result = mid;
-            break;
+        if (nums[mid] == target) {
+            return mid;
         }
-        else if (nums[mid] < target)
-        {
+        else if (nums[mid] < target) {
             left = mid + 1;
         }
-        else
-        {
+        else {
             right = mid - 1;
         }
     }
 
-    cout << "Target Index: " << result << endl;
+    return -1;
+}
 
-    // Test Case 2: Edge case
-    // Input: nums = {1, 3, 5, 7, 9}, target = 6
-    // Expected Output: Index -1
+int main() {
+    // Test Case 1 - Typical case
+    vector<int> nums1 = {-1, 0, 3, 5, 9, 12};
+    int target1 = 9;
+
+    cout << "Test Case 1: "
+         << search(nums1, target1) << endl;
+
+    // Test Case 2 - Edge case: target not found
+    vector<int> nums2 = {-1, 0, 3, 5, 9, 12};
+    int target2 = 2;
+
+    cout << "Test Case 2: "
+         << search(nums2, target2) << endl;
 
     return 0;
 }
