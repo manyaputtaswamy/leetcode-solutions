@@ -43,14 +43,34 @@ leetcode-solutions/
 ├── PROGRESS.md
 │
 ├── arrays-strings/
+│   ├── 01-two-sum.cpp
+│   ├── 01-two-sum.md
+│   ├── 01-result.png
+│   ├── 02-reverse-a-string.cpp
+│   ├── 02-reverse-a-string.md
+│   ├── 02-result.png
+│   ├── 03-valid-anagram.cpp
+│   ├── 03-valid-anagram.md
+│   ├── 03-result.png
+│   ├── 04-best-time-to-buy-and-sell-stock.cpp
+│   ├── 04-best-time-to-buy-and-sell-stock.md
+│   ├── 04-result.png
+│   ├── 05-longest-common-prefix.cpp
+│   ├── 05-longest-common-prefix.md
+│   └── 05-result.png
 │
 ├── basic-algorithms/
+│   ├── 06-binary-search.cpp
+│   ├── 06-binary-search.md
+│   ├── 06-result.png
+│   ├── 07-move-zeroes.cpp
+│   ├── 07-move-zeroes.md
+│   └── 07-result.png
 │
-├── stacks/
-│
-└── linked-lists/
-```
-
+└── stacks/
+    ├── 08-valid-parentheses.cpp
+    ├── 08-valid-parentheses.md
+    └── 08-result.png
 ## Documentation
 
 Each problem has a corresponding `.md` file containing:
