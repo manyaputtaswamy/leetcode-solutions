@@ -37,7 +37,7 @@ No problem added yet.
 
 ## Repository Structure
 
-```text
+
 leetcode-solutions/
 ├── README.md
 ├── PROGRESS.md
